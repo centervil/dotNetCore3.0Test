@@ -27,7 +27,8 @@ namespace WpfAppNetCore3
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            var s = NetCoreLib.CNetCore.GetNowTime();
+            Log.Text += s + "\n";
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
