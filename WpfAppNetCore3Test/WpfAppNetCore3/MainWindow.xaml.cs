@@ -27,19 +27,32 @@ namespace WpfAppNetCore3
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var s = NetCoreLib.CNetCore.GetNowTime();
-            Log.Text += s + "\n";
+            TryCatchAndLog(() => "[NetCoreLib]" + NetCoreLib.CNetCore.GetNowTime(), CheckText1);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var s = NetStandardLib.CNetStandard.GetNowTime();
-            Log.Text += s + "\n";
+            TryCatchAndLog(() => "[NetStandardLib]" + NetStandardLib.CNetStandard.GetNowTime(), CheckText2);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            TryCatchAndLog(() => "[NetFrameworkLib]" + NetStandardLib.CNetStandard.GetNowTime(), CheckText3);
+        }
 
+        private void TryCatchAndLog(Func<string> func, TextBlock textBlock)
+        {
+            try
+            {
+                string s = func();
+                Log.Text += s + "\n";
+                textBlock.Text = "\U00002714";
+            }
+            catch (Exception ex)
+            {
+                Log.Text += ex.Message + "\n";
+                textBlock.Text = "\U00002716";
+            }
         }
     }
 }

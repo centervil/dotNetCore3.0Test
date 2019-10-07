@@ -10,15 +10,15 @@
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <Button Content="NetCoreLib" Click="Button_Click_1" Width="200" Height="35"/>
-                <TextBlock x:Name="CheckText1" Width="50" Margin="10,0,0,0"/>
+                <TextBlock x:Name="CheckText1" Width="50" Margin="10,0,0,0"  VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Content="NetStdLib" Click="Button_Click_2" Width="200" Height="35"/>
-                <TextBlock x:Name="CheckText2" Width="50" Margin="10,0,0,0"/>
+                <TextBlock x:Name="CheckText2" Width="50" Margin="10,0,0,0" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Content="NetFrmLib" Click="Button_Click_3" Width="200" Height="35"/>
-                <TextBlock x:Name="CheckText3" Width="50" Margin="10,0,0,0"/>
+                <TextBlock x:Name="CheckText3" Width="50" Margin="10,0,0,0" VerticalAlignment="Center"/>
             </StackPanel>
             <TextBlock Text="" x:Name="Log" Width="250" Height="300" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="12"/>
         </StackPanel>
