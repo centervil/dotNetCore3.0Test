@@ -4,9 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CppLib\CppLib.vcxproj" />
     <ProjectReference Include="..\NetCoreLib\NetCoreLib.csproj" />
     <ProjectReference Include="..\NetFrameworkLib\NetFrameworkLib.csproj" />
     <ProjectReference Include="..\NetStandardLib\NetStandardLib.csproj" />

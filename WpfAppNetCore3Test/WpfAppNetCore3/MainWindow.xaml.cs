@@ -40,6 +40,16 @@ namespace WpfAppNetCore3
             TryCatchAndLog(() => "[NetFrameworkLib]" + NetFrameworkLib.CNetFrm.GetNowTime(), CheckText3);
         }
 
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            TryCatchAndLog(() =>
+            {
+                CppLibWrapper.SleepTest();
+                return "[CppLib]" + "SleepTest";
+            }, CheckText4);
+
+        }
+
         private void TryCatchAndLog(Func<string> func, TextBlock textBlock)
         {
             try
@@ -54,5 +64,6 @@ namespace WpfAppNetCore3
                 textBlock.Text = "\U00002716";
             }
         }
+
     }
 }

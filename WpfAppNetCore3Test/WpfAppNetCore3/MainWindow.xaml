@@ -20,7 +20,11 @@
                 <Button Content="NetFrmLib" Click="Button_Click_3" Width="200" Height="35"/>
                 <TextBlock x:Name="CheckText3" Width="50" Margin="10,0,0,0" VerticalAlignment="Center"/>
             </StackPanel>
-            <TextBlock Text="" x:Name="Log" Width="250" Height="300" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="12"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="CppLib" Click="Button_Click_4" Width="200" Height="35"/>
+                <TextBlock x:Name="CheckText4" Width="50" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock Text="" x:Name="Log" Width="250" Height="150" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="12"/>
         </StackPanel>
     </Grid>
 </Window>
