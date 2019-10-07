@@ -37,7 +37,7 @@ namespace WpfAppNetCore3
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            TryCatchAndLog(() => "[NetFrameworkLib]" + NetStandardLib.CNetStandard.GetNowTime(), CheckText3);
+            TryCatchAndLog(() => "[NetFrameworkLib]" + NetFrameworkLib.CNetFrm.GetNowTime(), CheckText3);
         }
 
         private void TryCatchAndLog(Func<string> func, TextBlock textBlock)

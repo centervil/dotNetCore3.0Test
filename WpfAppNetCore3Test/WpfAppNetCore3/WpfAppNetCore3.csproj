@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetCoreLib\NetCoreLib.csproj" />
+    <ProjectReference Include="..\NetFrameworkLib\NetFrameworkLib.csproj" />
     <ProjectReference Include="..\NetStandardLib\NetStandardLib.csproj" />
   </ItemGroup>
 
