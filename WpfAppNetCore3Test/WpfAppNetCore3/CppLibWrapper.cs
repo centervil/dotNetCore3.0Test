@@ -7,7 +7,7 @@ namespace WpfAppNetCore3
 {
     internal sealed class CppLibWrapper
     {
-        [DllImport("CppLib.dll"/*, CharSet = CharSet.Unicode*/)]
+        [DllImport("Lib\\CppLib.dll"/*, CharSet = CharSet.Unicode*/)]
         public extern static void SleepTest();
     }
 }

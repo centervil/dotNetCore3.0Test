@@ -328,3 +328,4 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/WpfAppNetCore3Test/WpfAppNetCore3/Lib/CppLib.dll
