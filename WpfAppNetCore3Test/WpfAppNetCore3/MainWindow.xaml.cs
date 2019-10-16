@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Wpf.UI.XamlHost;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,5 +66,13 @@ namespace WpfAppNetCore3
             }
         }
 
+        private void WindowsXamlHost_ChildChanged(object sender, EventArgs e)
+        {
+            if (sender is WindowsXamlHost windowsXamlHost &&
+                windowsXamlHost.Child is Windows.UI.Xaml.Controls.ProgressRing progressRing)
+            {
+                progressRing.IsActive = true;
+            }
+        }
     }
 }
