@@ -24,7 +24,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button Content="CppLib" Click="Button_Click_4" Width="200" Height="35"/>
                 <TextBlock x:Name="CheckText4" Width="50" Margin="10,0,0,0" VerticalAlignment="Center"/>
-            <xamlHost:WindowsXamlHost Width="50" InitialTypeName="Windows.UI.Xaml.Controls.ProgressRing" ChildChanged="WindowsXamlHost_ChildChanged" />
+            <xamlHost:WindowsXamlHost x:Name="progress" InitialTypeName="Windows.UI.Xaml.Controls.ProgressRing" ChildChanged="WindowsXamlHost_ChildChanged" />
             </StackPanel>
             <TextBlock Text="" x:Name="Log" Width="250" Height="150" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="12"/>
         </StackPanel>

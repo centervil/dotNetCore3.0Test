@@ -41,14 +41,32 @@ namespace WpfAppNetCore3
             TryCatchAndLog(() => "[NetFrameworkLib]" + NetFrameworkLib.CNetFrm.GetNowTime(), CheckText3);
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private async void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            TryCatchAndLog(() =>
+            progress.Visibility = Visibility.Visible;
+            CheckText4.Text = "";
+            await TryCatchAndLogAsync(async () =>
             {
-                CppLibWrapper.SleepTest();
+                await CppLibWrapper.SleepTestAsync();
+                progress.Visibility = Visibility.Hidden;
                 return "[CppLib]" + "SleepTest";
             }, CheckText4);
 
+        }
+
+        private async Task TryCatchAndLogAsync(Func<Task<string>> p, TextBlock textBlock)
+        {
+            try
+            {
+                string s = await p();
+                Log.Text += s + "\n";
+                textBlock.Text = "\U00002714";
+            }
+            catch (Exception ex)
+            {
+                Log.Text += ex.Message + "\n";
+                textBlock.Text = "\U00002716";
+            }
         }
 
         private void TryCatchAndLog(Func<string> func, TextBlock textBlock)
@@ -72,6 +90,7 @@ namespace WpfAppNetCore3
                 windowsXamlHost.Child is Windows.UI.Xaml.Controls.ProgressRing progressRing)
             {
                 progressRing.IsActive = true;
+                progress.Visibility = Visibility.Hidden;
             }
         }
     }
