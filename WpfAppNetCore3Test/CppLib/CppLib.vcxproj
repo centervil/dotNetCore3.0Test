@@ -98,7 +98,7 @@
       <EnableUAC>false</EnableUAC>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y $(TargetDir)$(TargetFileName) $(SolutionDir)WpfAppNetCore3\bin\$(PlatformTarget)\$(Configuration)\netcoreapp3.0</Command>
+      <Command>xcopy /y $(TargetDir)$(TargetFileName) $(SolutionDir)WpfAppNetCore3\Lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
