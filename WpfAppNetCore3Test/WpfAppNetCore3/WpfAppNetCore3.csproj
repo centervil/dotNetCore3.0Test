@@ -7,6 +7,7 @@
     <Platforms>AnyCPU;x86;x64</Platforms>
     <ReadyToRun>true</ReadyToRun>
     <PublishTrimmed>true</PublishTrimmed>
+    <ApplicationManifest>WpfAppNetCore3.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
