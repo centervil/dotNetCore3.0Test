@@ -43,12 +43,13 @@ namespace WpfAppNetCore3
 
         private async void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            progress.Visibility = Visibility.Visible;
+            var pg = (Windows.UI.Xaml.Controls.ProgressRing)progress.Child;
+            pg.IsActive = true;
             CheckText4.Text = "";
             await TryCatchAndLogAsync(async () =>
             {
                 await CppLibWrapper.SleepTestAsync();
-                progress.Visibility = Visibility.Hidden;
+                pg.IsActive = false;
                 return "[CppLib]" + "SleepTest";
             }, CheckText4);
 
@@ -81,16 +82,6 @@ namespace WpfAppNetCore3
             {
                 Log.Text += ex.Message + "\n";
                 textBlock.Text = "\U00002716";
-            }
-        }
-
-        private void WindowsXamlHost_ChildChanged(object sender, EventArgs e)
-        {
-            if (sender is WindowsXamlHost windowsXamlHost &&
-                windowsXamlHost.Child is Windows.UI.Xaml.Controls.ProgressRing progressRing)
-            {
-                progressRing.IsActive = true;
-                progress.Visibility = Visibility.Hidden;
             }
         }
     }
