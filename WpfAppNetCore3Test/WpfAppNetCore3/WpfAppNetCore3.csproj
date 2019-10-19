@@ -5,10 +5,14 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x86;x64</Platforms>
-    <ReadyToRun>true</ReadyToRun>
+    <RuntimeIdentifiers>win10-x64;win10-x86</RuntimeIdentifiers>
+    <RuntimeIdentifier>win10-x86</RuntimeIdentifier>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishReadyToRun>true</PublishReadyToRun>
     <!--<PublishTrimmed>true</PublishTrimmed>-->
     <ApplicationManifest>WpfAppNetCore3.manifest</ApplicationManifest>
-  </PropertyGroup>
+  
+</PropertyGroup>
 
   <ItemGroup>
     <None Remove="The Enchantments, WA 1920x1080.jpg" />
